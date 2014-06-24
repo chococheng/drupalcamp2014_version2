@@ -22,7 +22,9 @@ h5 { font-size: 12px; font-weight: normal; margin: 0; }
 ul { margin-left: 20px; }
 ol { margin-left: 36px; }
 
-
+p, h1{
+	font-family:"微軟正黑體", Arial;
+}
 
 /*
 	----------------------------
