@@ -40,6 +40,7 @@ p, h1{
 #sidebar ol { margin: 12px 0 12px 22px; }
 #intro{
 	width: 360px;
+	height: 205px;
 	float: left;
 	margin-right: 6px;
 }
@@ -51,6 +52,7 @@ p, h1{
 #doc{
 	width: 180px;
 	float: right;
+	height: 205px;
 
 }
 #counter{

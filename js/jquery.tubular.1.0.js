@@ -116,11 +116,11 @@
 
             if(player.isMuted()){
                 player.unMute();
-                $('#img').attr({"src": "sound.jpg"});
+                $('#img').attr({"src": "sound.png"});
             }
             else{
                 player.mute();
-                $('#img').attr({"src": "mute.jpg"});
+                $('#img').attr({"src": "mute.png"});
             }
             //(player.isMuted()) ? player.unMute() : player.mute();
         }).on('click', '.' + options.volumeDownClass, function(e) { // volume down button
