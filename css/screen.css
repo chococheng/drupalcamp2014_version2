@@ -79,6 +79,9 @@ p, h1{
 	font-size: 18px;
 	line-height: 40px;
 }
+#source{
+	color: #fff;
+}
 /*
 	----------------------------
 	PAGE/SECTION SPECIFIC
@@ -86,7 +89,7 @@ p, h1{
 */
 
 
-#video-controls { width: 333px; }
+#video-controls { width: 30px;}
 #video-controls a { color: #ddd; text-decoration: underline; }
 
 
@@ -112,4 +115,7 @@ p, h1{
 
 .clearfix:after {
     clear: both;
+}
+#image{
+	background: url(mute.jpg);
 }

@@ -18,7 +18,7 @@
     var defaults = {
         ratio: 16/9, // usually either 4/3 or 16/9 -- tweak as needed
         videoId: 'ZCAnLxRvNNc', // toy robot in space is a good default, no?
-        mute: true,
+        mute: false,
         repeat: true,
         width: $(window).width(),
         wrapperZIndex: 99,
@@ -113,7 +113,16 @@
             player.pauseVideo();
         }).on('click', '.' + options.muteButtonClass, function(e) { // mute button
             e.preventDefault();
-            (player.isMuted()) ? player.unMute() : player.mute();
+
+            if(player.isMuted()){
+                player.unMute();
+                $('#img').attr({"src": "sound.jpg"});
+            }
+            else{
+                player.mute();
+                $('#img').attr({"src": "mute.jpg"});
+            }
+            //(player.isMuted()) ? player.unMute() : player.mute();
         }).on('click', '.' + options.volumeDownClass, function(e) { // volume down button
             e.preventDefault();
             var currentVolume = player.getVolume();

@@ -11,13 +11,21 @@
 	<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/dc.js"></script>
-
+    <style>
+    	#wrapper{
+    		display: none;
+    	}
+    </style>
+    <script>
+    	//setTimeout(function(){$('#wrapper').slideDown('slow')}, 3000);
+    	setTimeout(function(){ $('#wrapper').css({'display':'block'})}, 3000);
+    </script>
 </head>
 <body>
 <div id="wrapper" class="clearfix">
 	<div id="main">
-<img src="logo.png" alt="Tubular logo" id="logo" />
-		<p id="video-controls" style="float: right" class="black-65">背景影片：<br /><a href="#" class="tubular-play">播放</a> | <a href="#" class="tubular-pause">暫停</a> | <a href="#" class="tubular-volume-up">增加音量</a> | <a href="#" class="tubular-volume-down">減小音量</a>
+		<img src="logo.png" style="width:270px" alt="drupalcamp 2014" id="logo" />
+		<div id="video-controls" class="black-15 " style="float: right"><a href="#" class="tubular-mute"><img id="img" style="width: 35px; height: 35px" src="sound.jpg"></img></a></div>
 		<div class="black-50" id="intro">
 			<h1>活動預告</h1>
 			<p><strong>
@@ -32,6 +40,9 @@
 		</div>
 		<div class="black-50" id="counter">
 			<div id="count"></div>
+		</div>
+		<div class="black-50" id="source">
+			<p> video: Can't Stop - Taiwan Freerunning</p>
 		</div>
 		<!--div class="black-50">
 			<h2>A word of caution</h2>
@@ -73,7 +84,8 @@
 			<p>Tubular makes some assumptions on how your website works. First, it assumes you have a single wrapper element under the body tag that envelops all of your website content. It promotes that wrapper to z-index: 99 and position: relative. You can configure the z-index value in the options. So it's assuming your wrapper can accept positioning without breaking your site.</p>
 			<p>Finally, tubular injects the YouTube video you specified as an iframe using fixed position at z-index: 1.  Browsers that do not support fixed positioning will not support tubular. Also, since the YouTube iframe API requires the HTML5 postMessage feature, browsers that do not support it (I'm looking at you, IE7) will not support tubular &mdash; tubular will return false before any changes are made to your CSS in IE7.</p>
 		</div-->
-	</div>
+	
 </div><!-- #wrapper -->
+
 </body>
 </html>

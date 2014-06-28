@@ -1,39 +1,39 @@
-setTimeout(
-		function(){
-		$("video").focus();
-		$("#intro").slideDown(2000);
-		/*$("video").keydown(function(event) {
-  			if(event.which==81)window.location = "http://osaas.nccu.edu.tw/nccu/index/main.php";
-  			if(event.which==65)window.location = "http://osaas.nccu.edu.tw/";
-  			if(event.which==66)window.location = "http://osaas.nccu.edu.tw/";
-		});*/
-		},500);
+$('document').ready(function() {
+  var options = { videoId: 'hKzMw1mdb-g', start: 3 };
+  $('#wrapper').tubular(options);
 
-	future = new Date(2014,7,29,0,0,0);
-	fufuretime=future.getTime();
-	function GetCount(date,id){
-    	nowtime = new Date(); //grab current date
-     	var amount = date - nowtime; //calc milliseconds between dates
+  /*$('#img').toggle(
+    function(){
+      $('#img').attr({"src": "mute.jpg"});
+    },
+    function(){
+      $('#img').attr({"src": "sound.jpg"});}
+    )*/
+  future = new Date(2014,7,29,0,0,0);
+  fufuretime=future.getTime();
+  function GetCount(date,id){
+      nowtime = new Date(); //grab current date
+      var amount = date - nowtime; //calc milliseconds between dates
     
      // if time is already past
-     	if(amount < 0){
-        	document.getElementById(id).innerHTML="就是今天!";
-     	}
+      if(amount < 0){
+          document.getElementById(id).innerHTML="就是今天!";
+      }
      // else date is still good
-     	else{
-         	output="";
-         	amount = Math.floor(amount/1000);	//change to seconds
-         	days=Math.floor(amount/86400);	//days
-         	amount=amount%86400;
-         	hours=Math.floor(amount/3600);	//hours
-        	amount=amount%3600;
-          	mins=Math.floor(amount/60);	//minutes
-          	amount=amount%60;
-          	secs=Math.floor(amount);	//seconds
-          	output += days +" 天, ";
-          	output += hours +" 小時, ";
-          	output += mins +" 分, ";
-          	output += secs +" 秒";
+      else{
+          output="";
+          amount = Math.floor(amount/1000); //change to seconds
+          days=Math.floor(amount/86400);  //days
+          amount=amount%86400;
+          hours=Math.floor(amount/3600);  //hours
+          amount=amount%3600;
+            mins=Math.floor(amount/60); //minutes
+            amount=amount%60;
+            secs=Math.floor(amount);  //seconds
+            output += days +" 天, ";
+            output += hours +" 小時, ";
+            output += mins +" 分, ";
+            output += secs +" 秒";
 
             switch(secs){
               case 9:
@@ -103,13 +103,23 @@ setTimeout(
             }
 
           template="<div id='countbox'><div id='counttitle'><span>倒數開跑</span></div><p>"+days+"<span class='word'>天</span> "+hours+"<span class='word'>小時</span> "+mins+"<span class='word'>分</span> "+secs+"<span class='word'>"+ "秒</span> "+"</p></div>"
-          	document.getElementById(id).innerHTML=template;
-          	
-          	setTimeout(function(){GetCount(date,id)}, 1000);
-     		}
-		}
+            document.getElementById(id).innerHTML=template;
+            
+            setTimeout(function(){GetCount(date,id)}, 1000);
+        }
+    }
  
-	window.onload=function(){
-    	GetCount(future, 'count');
+  window.onload=function(){
+      GetCount(future, 'count');
      //you can add additional countdowns here (just make sure you create dateFuture2 and countbox2 etc for each)
-	};
+  };
+
+
+
+  
+
+});
+	
+
+
+
