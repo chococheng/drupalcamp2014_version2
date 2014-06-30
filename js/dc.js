@@ -2,13 +2,7 @@ $('document').ready(function() {
   var options = { videoId: '60r0NyX2zPY', start: 3 };
   $('#wrapper').tubular(options);
 
-  /*$('#img').toggle(
-    function(){
-      $('#img').attr({"src": "mute.jpg"});
-    },
-    function(){
-      $('#img').attr({"src": "sound.jpg"});}
-    )*/
+
   future = new Date(2014,7,29,0,0,0);
   fufuretime=future.getTime();
   function GetCount(date,id){
